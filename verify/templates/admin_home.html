@@ -1,0 +1,19 @@
+{% extends 'navigation.html' %}
+
+{% load static %}
+{% block body %}
+<div class="container mt-5">
+<div class="row">
+    <div class="col-12 col-md-6">
+        <h3>Show a file-select field which allows multiple files:</h3>
+        <form method="post">
+        {% csrf_token %}
+            <label for="myfile">Select files:</label>
+            <input type="file" id="myfile" name="myfile" multiple><br><br>
+            <input type="submit">
+        </form>
+    </div>
+</div>
+</div>
+
+{% endblock %}
